@@ -1,4 +1,4 @@
-`This Project Involves 3 steps which is: 1.Setup of The App stack 2.Containerization of microservice App and 3.Deployment of the microservice App on Kubernetes Cluster`
+`This Project Involves 3 steps which is: 1.Setup of The App stack 2.Containerization of microservice App using DOcker and 3.Deployment of the microservice App on Kubernetes Cluster`
 
 <h2>STEP 1: SETUP OF THE MICROSERVICE APP STACK(VPROFILE)</h2>
 
@@ -42,4 +42,19 @@ Overall, the architectural design illustrates how the various components interac
    - Creating virtual machines.
    - Validating VMs and ensuring interactivity.
    - Setting up services sequentially: MySQL, Memcached, RabbitMQ, Tomcat, Nginx.
-   - Building and deploying the Java application.
+
+<br/>
+<img src="https://i.imgur.com/epowJdC.png" height="80%" width="80%" alt="vagrant file"/>
+<br />
+
+<h2>STEP 2: CONTAINERIZATION OF THE MICROSERVICE APP</h2>
+
+1. **Find Base Images**: I identified and selected appropriate base images from Docker Hub for each service required, including nginx, TomCat, MySQL, MemCached, and RabbitMQ.
+
+2. **Write Dockerfiles**: Created Dockerfiles for services that require customization. For example, TomCat need to deploy a specific artifact, nginx require custom configuration changes, and MySQL needs its own data, tables, and schema.
+
+3. **Build Images**: Used the Dockerfiles to build custom images for each service, incorporating the necessary configurations and dependencies.
+
+4. **Docker Compose**: Wrote a Docker Compose file to define the multi-container environment, specifying the services (nginx, TomCat, MemCached, RabbitMQ, MySQL) and their corresponding images.
+
+5. **Testing**: Utilize Docker to test the containers in the multi-container environment created by Docker Compose. Ensure that all services function as expected and interact correctly.
