@@ -34,3 +34,12 @@ The architectural design outlined in the transcript describes the structure and 
    - RabbitMQ, while non-functional in this scenario, would typically facilitate messaging between different components of the system.
 
 Overall, the architectural design illustrates how the various components interact to provide a functional web application experience for users. It emphasizes the role of each component in handling different aspects of the application's functionality, from load balancing and request processing to data storage and caching.
+
+<h2>Implementation Flow:</h2>
+
+   - Setting up tools.
+   - Cloning the source code repository.
+   - Creating virtual machines.
+   - Validating VMs and ensuring interactivity.
+   - Setting up services sequentially: MySQL, Memcached, RabbitMQ, Tomcat, Nginx.
+   - Building and deploying the Java application.
